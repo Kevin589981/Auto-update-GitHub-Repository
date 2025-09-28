@@ -28,11 +28,3 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           TARGET_REPOS: ${{ vars.TARGET_REPOS }}
         run: python update_readme.py
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull
-          git add .
-          git diff-index --quiet HEAD || git commit -m "docs: auto update README.md" && git push
