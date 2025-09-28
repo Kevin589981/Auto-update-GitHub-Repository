@@ -19,7 +19,7 @@ def update_readme():
         # 设置时区为北京时间
         tz = pytz.timezone('Asia/Shanghai')
         current_date = datetime.now(tz).strftime("%Y年%m月%d日更新")
-        update_line = f"\n{current_date}\n"
+        update_line = f"\n\n{current_date}\n\n"
 
         commit_message = f"docs: auto update README.md on {datetime.now(tz).strftime('%Y-%m-%d, %H:%M:%S')}"
 
