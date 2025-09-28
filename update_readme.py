@@ -21,7 +21,7 @@ def update_readme():
         current_date = datetime.now(tz).strftime("%Y年%m月%d日更新")
         update_line = f"\n{current_date}\n"
 
-        commit_message = f"docs: auto update README.md on {datetime.now(tz).strftime('%Y-%m-%d')}"
+        commit_message = f"docs: auto update README.md on {datetime.now(tz).strftime('%Y-%m-%d, %H:%M:%S')}"
 
         for repo_name in target_repos:
             try:
